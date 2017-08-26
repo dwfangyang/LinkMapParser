@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>resultdirectory</key>
+	<string>/Users/fangyang</string>
+	<key>linkmap1</key>
+	<string>/Users/fangyang/srcfolder/ios/ipatest_6.5/AppName-LinkMap-normal-arm64.txt</string>
+	<key>linkmap2</key>
+	<string>/Users/fangyang/srcfolder/ios/maint_6.6/AppName-LinkMap-normal-arm64.txt</string>
+</dict>
+</plist>
