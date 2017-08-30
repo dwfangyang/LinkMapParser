@@ -2,11 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>outputsizelimit</key>
+	<integer>30000</integer>
 	<key>resultdirectory</key>
 	<string>/Users/fangyang</string>
 	<key>linkmap1</key>
-	<string>/Users/fangyang/srcfolder/ios/ipatest_6.5/AppName-LinkMap-normal-arm64.txt</string>
+	<string>/Users/fangyang/Downloads/AppName-LinkMap-normal-arm64_6.6.txt</string>
 	<key>linkmap2</key>
-	<string>/Users/fangyang/srcfolder/ios/maint_6.6/AppName-LinkMap-normal-arm64.txt</string>
+	<string>/Users/fangyang/Downloads/AppName-LinkMap-normal-arm64_6.7.txt</string>
 </dict>
 </plist>

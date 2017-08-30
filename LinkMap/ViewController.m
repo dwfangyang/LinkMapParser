@@ -30,6 +30,7 @@
 @property (nonatomic,strong) NSMutableArray* moduleParserArr1;
 @property (nonatomic,strong) NSMutableArray* moduleParserArr2;
 @property (nonatomic,assign) NSUInteger dataOffset;
+@property (nonatomic,strong) NSDictionary* config;
 
 @end
 
@@ -83,9 +84,9 @@
 //        [_moduleParserArr1 addObject:parser1];
 //        [_moduleParserArr2 addObject:parser2];
 //    }
-    NSDictionary* plistDic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"]];
-    NSString* path1 = [plistDic objectForKey:@"linkmap1"];
-    NSString* path2 = [plistDic objectForKey:@"linkmap2"];
+    self.config  = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"]];
+    NSString* path1 = [self.config objectForKey:@"linkmap1"];
+    NSString* path2 = [self.config objectForKey:@"linkmap2"];
     NSString* content1 = [NSString stringWithContentsOfURL:[NSURL fileURLWithPath:path1 isDirectory:NO] encoding:NSMacOSRomanStringEncoding error:nil];
     NSString* content2 = [NSString stringWithContentsOfURL:[NSURL fileURLWithPath:path2 isDirectory:NO] encoding:NSMacOSRomanStringEncoding error:nil];
     NSMutableDictionary* dic1 = [self symbolMapFromContent:content1 extramodule:self.moduleParserArr1];
@@ -224,7 +225,7 @@
         [self appendResultWithSymbol:model result:result2];
     }
     
-    NSString* retPath = [plistDic objectForKey:@"resultdirectory"];
+    NSString* retPath = [self.config objectForKey:@"resultdirectory"];
     
     [result2 writeToFile:[NSString stringWithFormat:@"%@/result.txt",retPath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
@@ -505,6 +506,11 @@
 - (void)appendResultWithSymbol:(SymbolModel *)model result:(NSMutableString*)result{
     NSString *size = nil;
     NSString* codesize = nil;
+    NSNumber* limit = [self.config objectForKey:@"outputsizelimit"];
+    if( model.size < limit.integerValue )
+    {
+        return;
+    }
     if (model.size / 1024.0 / 1024.0 > 1) {
         size = [NSString stringWithFormat:@"%.2fM", model.size / 1024.0 / 1024.0];
     } else {
