@@ -507,7 +507,7 @@
     NSString *size = nil;
     NSString* codesize = nil;
     NSNumber* limit = [self.config objectForKey:@"outputsizelimit"];
-    if( model.size < limit.integerValue )
+    if( labs(model.size) < limit.integerValue )
     {
         return;
     }
