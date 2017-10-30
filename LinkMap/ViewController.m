@@ -227,7 +227,13 @@
     
     NSString* retPath = [self.config objectForKey:@"resultdirectory"];
     
-    [result2 writeToFile:[NSString stringWithFormat:@"%@/result.txt",retPath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    NSString* output = [NSString stringWithFormat:@"%@/result.txt",retPath];
+    [result2 writeToFile:output atomically:YES encoding:NSUTF8StringEncoding error:nil];
+//    NSURL * outputurl = [NSURL fileURLWithPath:output];
+    NSString* openpath = [[NSBundle mainBundle] pathForResource:@"openResult" ofType:@"sh"];
+    [NSTask launchedTaskWithLaunchPath:openpath arguments:[NSArray arrayWithObjects:output, nil]];
+    
+    exit(0);
 }
 
 - (IBAction)chooseFile:(id)sender {

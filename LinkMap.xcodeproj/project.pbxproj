@@ -14,6 +14,7 @@
 		6E7367F51CB7843200722B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7367F31CB7843200722B99 /* Main.storyboard */; };
 		6E73680C1CB784F100722B99 /* SymbolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E73680B1CB784F100722B99 /* SymbolModel.m */; };
 		C0285A281F287F8500C7855E /* SpecificModuleParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0285A271F287F8500C7855E /* SpecificModuleParser.m */; };
+		C080143B1FA70140006A4453 /* openResult.sh in Resources */ = {isa = PBXBuildFile; fileRef = C080143A1FA6FEFD006A4453 /* openResult.sh */; };
 		C0D3039F1F51B51000885223 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0D3039E1F51B51000885223 /* config.plist */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		6E73680B1CB784F100722B99 /* SymbolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolModel.m; sourceTree = "<group>"; };
 		C0285A261F287F8500C7855E /* SpecificModuleParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificModuleParser.h; sourceTree = "<group>"; };
 		C0285A271F287F8500C7855E /* SpecificModuleParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificModuleParser.m; sourceTree = "<group>"; };
+		C080143A1FA6FEFD006A4453 /* openResult.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = openResult.sh; sourceTree = "<group>"; };
 		C0D3039E1F51B51000885223 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				C0285A261F287F8500C7855E /* SpecificModuleParser.h */,
 				C0285A271F287F8500C7855E /* SpecificModuleParser.m */,
 				C0D3039E1F51B51000885223 /* config.plist */,
+				C080143A1FA6FEFD006A4453 /* openResult.sh */,
 			);
 			path = LinkMap;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C080143B1FA70140006A4453 /* openResult.sh in Resources */,
 				C0D3039F1F51B51000885223 /* config.plist in Resources */,
 				6E7367F21CB7843200722B99 /* Assets.xcassets in Resources */,
 				6E7367F51CB7843200722B99 /* Main.storyboard in Resources */,
